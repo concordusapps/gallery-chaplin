@@ -9,15 +9,17 @@
     %meta{content: '', name: 'description'}/
     %meta{content: 'width=device-width', name: 'viewport'}/
 
-    %link{href: 'styles/main.css', rel: 'stylesheet'}/
+    %link{href: '/styles/main.css', rel: 'stylesheet'}/
     -# %link{href: '/favicon.ico', rel: 'icon'}
 
     - if @requirejs
       %script{
-        data-main: 'scripts/main.js',
-        src: 'components/scripts/requirejs/require.js'}
+        data-main: '/scripts/main.js',
+        src: '/components/scripts/requirejs/require.js'}
 
     - else
-      %script{src: 'scripts/main.js'}
+      %script{src: '/scripts/main.js'}
 
-  %body#container.container
+  %body#container
+    #loading
+      %span Loading...

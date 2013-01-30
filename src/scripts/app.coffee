@@ -1,5 +1,3 @@
-'use strict'
-
 Chaplin  = require 'chaplin'
 routes   = require 'routes'
 
@@ -25,6 +23,8 @@ module.exports = class Application extends Chaplin.Application
 
   initMediator: ->
     # Attach any semi-globals here.
+    Chaplin.mediator.authenticated = no
+    Chaplin.mediator.token = null
     Chaplin.mediator.seal()
 
   initControllers: ->

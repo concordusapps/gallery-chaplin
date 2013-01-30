@@ -1,0 +1,24 @@
+// Button
+// ======
+button, button.btn, {
+  font-weight: bold;
+  font-size: 10pt;
+  @include border-radius(2px);
+}
+
+// Input
+// =====
+input[type="text"],input[type="email"],input[type="password"],textarea {
+  $highlight-color: rgb(65, 131, 196);
+  margin: 0;
+  font-size: 10pt;
+  height: 30px;
+  line-height: normal;
+  width: 100%;
+  @include box-sizing(border-box);
+  @include border-radius(2px);
+  &:focus {
+    border-color: $highlight-color;
+    @include box-shadow($highlight-color 0 0 3px -1px);
+  }
+}

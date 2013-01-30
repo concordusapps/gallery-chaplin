@@ -1,0 +1,48 @@
+#list {
+  height: 100%;
+}
+
+#list ul.items {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 225px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#list ul.items li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  img {
+    @extend .img-polaroid;
+    display: inline-block;
+    margin: 0;
+    margin-right: 0.85em;
+    margin-bottom: 0.85em;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+#list .tag-container {
+  width: 200px;
+  height: 100%;
+  div {
+    height: 100%;
+    border-right: 3px solid rgb(190, 190, 190);
+    background: rgb(120, 120, 120);
+  }
+  ul {
+    list-style-type: none;
+    li {
+      margin: 0;
+      font-weight: bold;
+      padding: 0.5em;
+      a { color: rgb(250, 250, 250); }
+    }
+  }
+}

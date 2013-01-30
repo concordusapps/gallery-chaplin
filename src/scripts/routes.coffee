@@ -1,4 +1,4 @@
-'use strict'
-
 module.exports = (match) ->
-  match '', 'index#show'
+  match '', 'product#list', name: 'list'
+  match ':tag', 'product#tag', name: 'tag'
+  match 'account/login', 'login#show', name: 'login'

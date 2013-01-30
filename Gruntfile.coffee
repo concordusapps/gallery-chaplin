@@ -212,13 +212,25 @@ module.exports = (grunt) ->
     connect:
       base: 'temp'
       hostname: 'localhost'
-      port: 3501
+      port: 3502
       middleware: (connect, options) -> [
         connect.logger {immediate: true, format: 'dev'}
         require('connect-url-rewrite') ['^[^.]+$ /']
         connect.static options.base
         connect.directory options.base
       ]
+
+    # Proxy
+    # -----
+    proxy:
+      server:
+        options:
+          port: 3501
+          router:
+            'localhost/api': 'localhost:8001/api'
+            'localhost/login': 'localhost:8001/login'
+            'localhost/sessions': 'localhost:8001/sessions'
+            'localhost': 'localhost:3502'
 
   # Dependencies
   # ============
@@ -250,23 +262,29 @@ module.exports = (grunt) ->
     'coffeelint'
   ]
 
-  # Default
-  # -------
-  grunt.registerTask 'default', [
-    'prepare'
+  # Server
+  # ------
+  grunt.registerTask 'server', [
     'copy:static'
     'script'
     'haml:compile'
     'haml:index'
     'compass:compile'
     'connect'
+    'proxy'
     'watch'
+  ]
+
+  # Default
+  # -------
+  grunt.registerTask 'default', [
+    'prepare'
+    'server'
   ]
 
   # Build
   # -----
   grunt.registerTask 'build', [
-    'prepare'
     'copy:static'
     'script'
     'haml:compile'

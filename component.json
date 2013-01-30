@@ -9,7 +9,8 @@
     "requirejs": "2.1.x",
     "almond": "0.2.x",
     "bootstrap-sass": "2.2.x",
-    "backbone.stickit": "0.6.x"
+    "backbone.stickit": "0.6.x",
+    "font-awesome": "3.x"
   },
   "exportsOverride": {
     "jquery": {
@@ -36,6 +37,9 @@
     },
     "backbone.stickit": {
       "scripts": "backbone.stickit.js"
+    },
+    "font-awesome": {
+      "styles": "sass/font-awesome.scss"
     }
   }
 }

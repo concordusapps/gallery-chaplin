@@ -1,5 +1,3 @@
-'use strict'
-
 Backbone = require 'backbone-core'
 require 'backbone-stickit'
 

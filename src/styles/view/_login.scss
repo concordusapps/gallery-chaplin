@@ -1,0 +1,56 @@
+
+#login .logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60%;
+  border-bottom: 4px solid rgb(190, 190, 190);
+  * {
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+  }
+  h1 {
+    margin-left: 2.35em;
+    color: rgb(90, 90, 90);
+    font-family: "Arial";
+    font-weight: normal;
+  }
+}
+
+$padding: 15px;
+#login .form-container {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(90, 90, 90);
+  .form-panel {
+    display: block;
+    left: 30%;
+    position: absolute;
+    top: 30px;
+    width: 60%;
+    + .form-panel {
+      top: (30px * 2) + $padding;
+    }
+  }
+  label {
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+  }
+  input {
+    width: 250px;
+    display: inline;
+  }
+  button {
+    position: absolute;
+    top: 30px + $padding;
+    width: 135px;
+    left: (80px + 250px) - 135px + 2px;
+  }
+}

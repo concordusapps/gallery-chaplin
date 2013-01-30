@@ -8,7 +8,7 @@
     "grunt": "0.4.x",
     "grunt-haml": "0.3.x",
     "grunt-contrib-coffee": "0.4.x",
-    "grunt-contrib-clean": "0.4.x",
+    "grunt-contrib-clean": "git://github.com/gruntjs/grunt-contrib-clean.git",
     "grunt-contrib-copy": "0.4.x",
     "grunt-contrib-compass": "0.1.x",
     "grunt-requirejs": "0.3.x",
@@ -18,6 +18,7 @@
     "grunt-contrib-watch": "0.2.x",
     "grunt-coffeelint": "0.0.x",
     "grunt-bower-task": "0.1.x",
+    "grunt-proxy": "0.0.x",
     "connect-url-rewrite": "0.1.x"
   }
 }
