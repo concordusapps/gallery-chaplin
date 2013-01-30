@@ -13,6 +13,11 @@ module.exports = class Index extends Protected
         composition.collection.fetch()
         composition
 
+      # @compose 'product:list', ->
+      #   @collection = new Collection
+      #   @view = new View {collection: @collection}
+      #   @collection.fetch()
+
   list: ->  # All done in the before action
 
   tag: (param) ->

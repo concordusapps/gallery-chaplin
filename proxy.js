@@ -10,8 +10,6 @@ var proxy = new httpProxy.RoutingProxy();
 // Create a regular http server and proxy its handler
 //
 http.createServer(function (req, res) {
-  console.log(req.url);
-  // req.url = '/api/products.json';
   req.headers.host = 'fabric-ocean.herokuapp.com';
   proxy.proxyRequest(req, res, {
     host: 'fabric-ocean.herokuapp.com',
